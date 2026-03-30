@@ -110,8 +110,8 @@ body {
 }
 
 .hero-eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
+    font-size: 0.82rem;        /* was 0.7rem */
+    letter-spacing: 0.2em;     /* was 0.3rem — less stretched, more readable */
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 1.25rem;
@@ -147,4 +147,67 @@ body {
 
 .hero-cta:hover {
     color: var(--accent);
+}
+
+/* ===================== INTRO ===================== */
+#intro {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 4rem;
+    background: var(--black);
+}
+
+.intro-inner {
+    max-width: 720px;
+    text-align: center;
+}
+
+.intro-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--white);
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.intro-line--italic {
+    font-style: italic;
+    color: var(--accent);
+    transition-delay: 0.2s;
+}
+
+.intro-rule {
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: var(--accent);
+    margin: 2.5rem auto;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s;
+}
+
+.intro-sub {
+    font-size: 0.95rem;        /* was 0.82rem */
+    letter-spacing: 0.12em;    /* was 0.18em — tighter feels bigger */
+    text-transform: uppercase;
+    color: var(--white);       /* was var(--dim) — full white, no more fading */
+    line-height: 2;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.9s ease 0.5s, transform 0.9s ease 0.5s;
+}
+
+/* revealed state — JS will add this class */
+.intro-inner.is-visible .intro-line,
+.intro-inner.is-visible .intro-rule,
+.intro-inner.is-visible .intro-sub {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
 }
