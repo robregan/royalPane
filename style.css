@@ -211,3 +211,94 @@ body {
     opacity: 1;
     transform: translateY(0) scaleY(1);
 }
+
+/* ===================== SERVICES ===================== */
+#services {
+    padding: 10rem 4rem;
+    background: var(--black);
+}
+
+.services-header {
+    margin-bottom: 5rem;
+}
+
+.section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 300;
+}
+
+.services-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 100px;
+    align-items: center;
+    padding: 2.8rem 0;
+    border-top: 1px solid rgba(245, 242, 238, 0.08);
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    cursor: default;
+}
+
+.service-item:last-child {
+    border-bottom: 1px solid rgba(245, 242, 238, 0.08);
+}
+
+.service-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* stagger each item slightly */
+.service-item:nth-child(1) { transition-delay: 0.05s; }
+.service-item:nth-child(2) { transition-delay: 0.1s; }
+.service-item:nth-child(3) { transition-delay: 0.15s; }
+.service-item:nth-child(4) { transition-delay: 0.2s; }
+.service-item:nth-child(5) { transition-delay: 0.25s; }
+.service-item:nth-child(6) { transition-delay: 0.3s; }
+
+.service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    font-weight: 300;
+}
+
+.service-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-body h3 {
+    color: var(--accent);
+}
+
+.service-body p {
+    font-size: 0.85rem;
+    color: var(--dim);
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    max-width: 480px;
+}
+
+.service-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dimmer);
+    text-align: right;
+    font-weight: 300;
+}

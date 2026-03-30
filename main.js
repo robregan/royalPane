@@ -11,3 +11,4 @@ const observer = new IntersectionObserver(
 )
 
 document.querySelectorAll('.intro-inner').forEach((el) => observer.observe(el))
+document.querySelectorAll('.service-item').forEach((el) => observer.observe(el))
