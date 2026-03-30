@@ -708,7 +708,7 @@ a.contact-detail:hover .detail-value {
 .footer-copy {
     font-size: 0.9rem;
     letter-spacing: 0.1em;
-    color: var(--dimmer);
+    color: rgba(245, 242, 238, 0.55);
     font-weight: 300;
 }
 
@@ -723,6 +723,18 @@ a.contact-detail:hover .detail-value {
 
 .footer-phone:hover {
     color: var(--white);
+}
+
+/* Visually hidden but readable by screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
 }
 
 /* ===================== RESPONSIVE ===================== */

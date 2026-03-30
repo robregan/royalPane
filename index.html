@@ -26,6 +26,7 @@
     <section id="hero">
   <video autoplay muted loop playsinline id="hero-video" poster="assets/hero-poster.jpg">
     <source src="assets/hero.mp4" type="video/mp4" />
+    <track kind="captions" src="" label="No dialogue" default />
 </video>
         <div class="hero-overlay"></div>
         <nav id="nav">
@@ -79,6 +80,7 @@
 
 <!-- SERVICES -->
 <section id="services">
+    <h2 class="visually-hidden">Services</h2>
     <div class="services-header">
         <span class="section-label">What We Do</span>
     </div>
@@ -261,7 +263,7 @@
                 </div>
                 <div class="form-group">
                     <label>Service</label>
-                    <select>
+                    <select aria-label="Select a service">
                         <option value="" disabled selected>Select a service...</option>
                         <option>Residential Window Cleaning</option>
                         <option>Commercial Window Cleaning</option>
